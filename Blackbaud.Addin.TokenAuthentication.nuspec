@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Blackbaud.Addin.TokenAuthentication</id>
+    <version>2.0.0</version>
+    <title>Blackbaud.Addin.TokenAuthentication</title>
+    <authors>Blackbaud Product Development</authors>
+    <owners>Blackbaud, Inc.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Not provided.</description>
+    <copyright>Copyright © Blackbaud 2017</copyright>
+    <language>en-US</language>
+    <!--<dependencies>
+      <dependency id="Newtonsoft.Json" version="10.0.3" />
+    </dependencies>-->
+  </metadata>
+  <files>
+    <file src="Blackbaud.Addin.TokenAuthentication\bin\netstandard2.0\Blackbaud.Addin.TokenAuthentication.dll" target="lib\netstandard2.0" />
+    <file src="Blackbaud.Addin.TokenAuthentication\bin\netstandard2.0\Blackbaud.Addin.TokenAuthentication.xml" target="lib\netstandard2.0" />
+  </files>
+</package>

@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blackbaud.Addin.TokenAuthentication", "Blackbaud.Addin.TokenAuthentication\Blackbaud.Addin.TokenAuthentication.csproj", "{CA1C9635-7489-4E3E-9F40-D8A2C4FC9EBC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E109FAE5-F467-4F00-A789-BF93270C336C}"
+	ProjectSection(SolutionItems) = preProject
+		Blackbaud.Addin.TokenAuthentication.nuspec = Blackbaud.Addin.TokenAuthentication.nuspec
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbaud.Addin.TokenAuthentication.Tests", "Blackbaud.Addin.TokenAuthentication.Tests\Blackbaud.Addin.TokenAuthentication.Tests.csproj", "{2DAB1072-D300-4F83-8F53-F7C5A1393748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blackbaud.Addin.TokenAuthentication.Tester", "Blackbaud.Addin.TokenAuthentication.Tester\Blackbaud.Addin.TokenAuthentication.Tester.csproj", "{57E4FF62-730F-4A8F-A154-4CBDEFB75913}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA1C9635-7489-4E3E-9F40-D8A2C4FC9EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA1C9635-7489-4E3E-9F40-D8A2C4FC9EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA1C9635-7489-4E3E-9F40-D8A2C4FC9EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA1C9635-7489-4E3E-9F40-D8A2C4FC9EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DAB1072-D300-4F83-8F53-F7C5A1393748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DAB1072-D300-4F83-8F53-F7C5A1393748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DAB1072-D300-4F83-8F53-F7C5A1393748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DAB1072-D300-4F83-8F53-F7C5A1393748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E4FF62-730F-4A8F-A154-4CBDEFB75913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E4FF62-730F-4A8F-A154-4CBDEFB75913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E4FF62-730F-4A8F-A154-4CBDEFB75913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E4FF62-730F-4A8F-A154-4CBDEFB75913}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39C0060A-DAFE-40CD-A7DA-0ACC08C57FC5}
+	EndGlobalSection
+EndGlobal

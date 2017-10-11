@@ -1,0 +1,5 @@
+{
+    "name": "addin-tokenauthentication",
+    "namespace": "Blackbaud.Addin.TokenAuthentication",
+    "framework": ".net-standard"
+}
