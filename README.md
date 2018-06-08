@@ -3,7 +3,7 @@ Before looking for a user mapping, add-in developers should first validate the s
 
 [SKY API OpenIDConnect configuration](https://oauth2.sky.blackbaud.com/.well-known/openid-configuration)
 
-Developers building add-ins in .NET can make use of a Blackbaud-provided library to assist with validating the UIT. This library is distributed as a NuGet package named Blackbaud.Addin.tokenAuthentication on NuGet.org.
+Developers building add-ins in .NET can make use of this Blackbaud-provided library to assist with validating the UIT. This library is distributed as a NuGet package named [Blackbaud.Addin.tokenAuthentication](https://www.nuget.org/packages/Blackbaud.Addin.tokenAuthentication).
 
 # Example validation code
 
