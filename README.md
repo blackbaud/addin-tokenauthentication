@@ -3,7 +3,6 @@ The addin-tokenauthentication library gives SKY APIdevelopers building SKY API a
 
 # Installation
 
-## Nuget
 This library is distributed as a NuGet package named [Blackbaud.Addin.tokenAuthentication](https://www.nuget.org/packages/Blackbaud.Addin.tokenAuthentication).
 
 # SKY API add-ins
