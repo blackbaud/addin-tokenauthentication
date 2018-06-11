@@ -1,12 +1,12 @@
-# SKY API addin tokenauthentication
-The addin-tokenauthentication library gives SKY APIdevelopers building SKY API add-ins in .NET the ability to validate user identity tokens. 
+# SKY add-in tokenauthentication
+This library gives SKY API developers building SKY add-ins in .NET the ability to validate user identity tokens. 
 
 # Installation
 
 This library is distributed as a NuGet package named [Blackbaud.Addin.tokenAuthentication](https://www.nuget.org/packages/Blackbaud.Addin.tokenAuthentication).
 
-# SKY API add-ins
-SKY API add-ins support a single-sign-on (SSO) mechanism that can be used to correlate the Blackbaud user with a user in the add-in's native system.
+# SKY add-ins
+SKY add-ins support a single-sign-on (SSO) mechanism that can be used to correlate the Blackbaud user with a user in the add-in's native system.
 
 Within the [Add-in Client JavaScript library](https://github.com/blackbaud/sky-api-addin), the AddinClient class provides a `getAuthtoken` function for getting a short-lived "user identity token" from the host page/application/SPA. This token is a signed value that is issued to the SKY API application and represents the Blackbaud user's identity.
 
