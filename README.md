@@ -1,3 +1,11 @@
+# SKY API addin tokenauthentication
+The addin-tokenauthentication library gives SKY APIdevelopers building SKY API add-ins in .NET the ability to validate user identity tokens. 
+
+# Installation
+
+## Nuget
+This library is distributed as a NuGet package named [Blackbaud.Addin.tokenAuthentication](https://www.nuget.org/packages/Blackbaud.Addin.tokenAuthentication).
+
 # SKY API add-ins
 SKY API add-ins support a single-sign-on (SSO) mechanism that can be used to correlate the Blackbaud user with a user in the add-in's native system.
 
@@ -25,8 +33,6 @@ client.getAuthToken().then((token) => {
 Before looking for a user mapping, add-in developers should first validate the signature of the user identity token against the OpenIDConnect endpoint within SKY API OAuth 2.0 service. This prevents certain types of attack vectors and provides a mechanism for the add-in to securely convey the Blackbaud user's identity to its own backend.
 
 [SKY API OpenIDConnect configuration](https://oauth2.sky.blackbaud.com/.well-known/openid-configuration)
-
-Developers building add-ins in .NET can make use of this Blackbaud-provided library to assist with validating the UIT. This library is distributed as a NuGet package named [Blackbaud.Addin.tokenAuthentication](https://www.nuget.org/packages/Blackbaud.Addin.tokenAuthentication).
 
 # Example validation code
 
