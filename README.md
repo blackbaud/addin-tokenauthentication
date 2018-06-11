@@ -1,4 +1,4 @@
-# SKY add-in tokenauthentication
+# SKY add-in token validation
 This library gives SKY API developers building SKY add-ins in .NET the ability to validate user identity tokens. 
 
 # Installation
