@@ -58,3 +58,5 @@ catch (TokenValidationException ex)
 ```
 
 Once the token has been validated, the add-in's backend will know the Blackbaud user's ID and can determine if a mapping exists for the user in the add-in's native system. If a mapping exists, then the add-in's backend can immediately present the content for the add-in. If no user mapping exists, the add-in can prompt the user to login.
+
+For more information on creating SKY Add-ins, please see https://developer.blackbaud.com/skyapi/docs/addins.
