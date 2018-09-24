@@ -7,7 +7,7 @@
     <authors>Blackbaud Product Development</authors>
     <owners>Blackbaud, Inc.</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Not provided.</description>
+    <description>A .NET Framework library used to validate user identity tokens for use with SKY Add-ins.</description>
     <copyright>Copyright © Blackbaud 2018</copyright>
     <language>en-US</language>
     <projectUrl>https://github.com/blackbaud/addin-tokenauthentication</projectUrl>
