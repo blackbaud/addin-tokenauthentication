@@ -214,7 +214,7 @@ namespace Blackbaud.Addin.TokenAuthentication.Tests
             await mockToken.Object.ValidateTokenAsync(TEST_JWT, new Guid(TEST_AUD));
 
             Assert.AreEqual(mockToken.Object.UserId, TEST_USERID, true);
-            Assert.AreEqual(mockToken.Object.environmentId, TEST_ENVID, true);
+            Assert.AreEqual(mockToken.Object.EnvironmentId, TEST_ENVID, true);
 
             mockCache.Verify(o => o.Refresh(), Times.Never);
         }

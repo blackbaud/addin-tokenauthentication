@@ -68,7 +68,7 @@ namespace Blackbaud.Addin.TokenAuthentication
         /// <summary>
         /// The environment identifier
         /// </summary>
-        public string environmentId { get; private set; }
+        public string EnvironmentId { get; private set; }
 
         #endregion
 
@@ -157,7 +157,7 @@ namespace Blackbaud.Addin.TokenAuthentication
                     }
 
                     this.UserId = userId;
-                    this.environmentId = envId;
+                    this.EnvironmentId = envId;
                     return;
                 }
                 catch (SecurityTokenInvalidAudienceException e1)

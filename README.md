@@ -51,8 +51,8 @@ try
     // if valid, the UserId property contains the Blackbaud user's ID
     var userId = uit.UserId;
 
-	//if valid, the environmentId property contains the environment ID
-    var envId = uit.environmentId;
+	//if valid, the EnvironmentId property contains the environment ID
+    var envId = uit.EnvironmentId;
 }
 catch (TokenValidationException ex)
 {
