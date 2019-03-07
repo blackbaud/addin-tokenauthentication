@@ -17,7 +17,8 @@ namespace Blackbaud.Addin.TokenAuthentication.Tests
         private const string TEST_X5T = "my_test_x5t";
         private const string TEST_JWT = "my test token value";
         private const string TEST_AUD = "f4414c4d-7a29-4249-82b4-4b10a8b4719f";
-        private const string TEST_USERID = "9d874c83-cd07-4690-ab6d-ad9551dbacf4"; 
+        private const string TEST_USERID = "9d874c83-cd07-4690-ab6d-ad9551dbacf4";
+        private const string TEST_ENVID = "p-Q2caBopqjEisbiLbtjEoMh";
 
         [TestMethod]
         [Description("Tests that the constructor is successful.")]
@@ -190,7 +191,7 @@ namespace Blackbaud.Addin.TokenAuthentication.Tests
         }
 
         [TestMethod]
-        [Description("If the token is valid, the userId is returned.")]
+        [Description("If the token is valid, the userId and environmentId are returned.")]
         public async Task UserIdentityToken_ValidToken()
         {
             var mockCache = GetMockCache();
@@ -204,6 +205,7 @@ namespace Blackbaud.Addin.TokenAuthentication.Tests
 
                 var identity = new ClaimsIdentity("RandomValue");
                 identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, TEST_USERID));
+                identity.AddClaim(new Claim("environment_id", TEST_ENVID));
 
                 result.AddIdentity(identity);
                 return result;
@@ -212,6 +214,7 @@ namespace Blackbaud.Addin.TokenAuthentication.Tests
             await mockToken.Object.ValidateTokenAsync(TEST_JWT, new Guid(TEST_AUD));
 
             Assert.AreEqual(mockToken.Object.UserId, TEST_USERID, true);
+            Assert.AreEqual(mockToken.Object.EnvironmentId, TEST_ENVID, true);
 
             mockCache.Verify(o => o.Refresh(), Times.Never);
         }

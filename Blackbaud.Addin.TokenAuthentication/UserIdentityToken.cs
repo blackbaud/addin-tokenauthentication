@@ -65,6 +65,11 @@ namespace Blackbaud.Addin.TokenAuthentication
         /// </summary>
         public string UserId { get; private set; }
 
+        /// <summary>
+        /// The environment identifier
+        /// </summary>
+        public string EnvironmentId { get; private set; }
+
         #endregion
 
         /// <summary>
@@ -137,6 +142,7 @@ namespace Blackbaud.Addin.TokenAuthentication
                 {
                     var cp = ValidateToken(token, validationparams);
                     var userId = GetClaimValue(ClaimTypes.NameIdentifier, cp.Claims);
+                    var envId = GetClaimValue("environment_id", cp.Claims);
 
                     // if no userId was found, throw an exception
                     if (string.IsNullOrEmpty(userId))
@@ -144,7 +150,14 @@ namespace Blackbaud.Addin.TokenAuthentication
                         throw new InvalidTokenFormatException();
                     }
 
+                    // if no environmentId was found, throw an exception
+                    if (string.IsNullOrEmpty(envId))
+                    {
+                        throw new InvalidTokenFormatException();
+                    }
+
                     this.UserId = userId;
+                    this.EnvironmentId = envId;
                     return;
                 }
                 catch (SecurityTokenInvalidAudienceException e1)
