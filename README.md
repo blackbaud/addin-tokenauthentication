@@ -16,7 +16,7 @@ Note that the user identity token is a JWT that is signed by the SKY API OAuth 2
 
 This flow is illustrated below:
 
-![flow](https://sky.blackbaudcdn.net/skyuxapps/uiextensibility-docs/assets/add-in-sso.6121e14a352d0208ae00c92a4a5274d824550356.png)
+![flow](https://sky.blackbaudcdn.net/skyuxapps/uiextensibility-docs/assets/add-in-sso.dadfd9a6ab3e64c24ba984751efd43aef73ee67c.png)
 
 Add-ins can make the following request upon initialization to obtain a user identity token (typically handled within the `init` callback):
 
