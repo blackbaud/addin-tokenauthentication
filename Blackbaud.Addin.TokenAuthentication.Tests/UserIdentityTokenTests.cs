@@ -83,7 +83,7 @@ namespace Blackbaud.Addin.TokenAuthentication.Tests
             }
             catch
             {
-                // eat the exception, we just want to verify that refresh was called
+                //eat the exception, we just want to verify that refresh was called
             }
 
             mockCache.Verify(o => o.Refresh());
