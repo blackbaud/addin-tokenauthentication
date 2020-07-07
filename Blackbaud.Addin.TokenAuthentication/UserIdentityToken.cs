@@ -66,6 +66,21 @@ namespace Blackbaud.Addin.TokenAuthentication
         public string UserId { get; private set; }
 
         /// <summary>
+        /// The user email address
+        /// </summary>
+        public string Email { get; private set; }
+
+        /// <summary>
+        /// The user last name
+        /// </summary>
+        public string FamilyName { get; private set; }
+
+        /// <summary>
+        /// The user first name
+        /// </summary>
+        public string GivenName { get; private set; }
+
+        /// <summary>
         /// The environment identifier
         /// </summary>
         public string EnvironmentId { get; private set; }
@@ -143,6 +158,9 @@ namespace Blackbaud.Addin.TokenAuthentication
                     var cp = ValidateToken(token, validationparams);
                     var userId = GetClaimValue(ClaimTypes.NameIdentifier, cp.Claims);
                     var envId = GetClaimValue("environment_id", cp.Claims);
+                    var email = GetClaimValue(ClaimTypes.Email, cp.Claims);
+                    var familyName = GetClaimValue(ClaimTypes.Surname, cp.Claims);
+                    var givenName = GetClaimValue(ClaimTypes.GivenName, cp.Claims);
 
                     // if no userId was found, throw an exception
                     if (string.IsNullOrEmpty(userId))
@@ -156,8 +174,30 @@ namespace Blackbaud.Addin.TokenAuthentication
                         throw new InvalidTokenFormatException();
                     }
 
+                    // if no email was found, throw an exception
+                    if (string.IsNullOrEmpty(email))
+                    {
+                        throw new InvalidTokenFormatException();
+                    }
+
+                    // if no familyName was found, throw an exception
+                    if (string.IsNullOrEmpty(familyName))
+                    {
+                        throw new InvalidTokenFormatException();
+                    }
+
+                    // if no givenName was found, throw an exception
+                    if (string.IsNullOrEmpty(givenName))
+                    {
+                        throw new InvalidTokenFormatException();
+                    }
+
+
                     this.UserId = userId;
                     this.EnvironmentId = envId;
+                    this.Email = email;
+                    this.FamilyName = familyName;
+                    this.GivenName = givenName;
                     return;
                 }
                 catch (SecurityTokenInvalidAudienceException e1)

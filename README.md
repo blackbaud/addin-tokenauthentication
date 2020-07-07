@@ -50,8 +50,17 @@ try
 
     // if valid, the UserId property contains the Blackbaud user's ID
     var userId = uit.UserId;
+    
+    // if valid, the Email property contains the Blackbaud user's email address
+    var email = uit.Email;
+    
+    // if valid, the FamilyName property contains the Blackbaud user's last name
+    var familyName = uit.FamilyName;
+    
+    // if valid, the GivenName property contains the Blackbaud user's first name
+    var givenName = uit.GivenName;
 
-	//if valid, the EnvironmentId property contains the environment ID
+    //if valid, the EnvironmentId property contains the environment ID
     var envId = uit.EnvironmentId;
 }
 catch (TokenValidationException ex)
