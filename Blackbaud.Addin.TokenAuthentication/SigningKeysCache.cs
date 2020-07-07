@@ -23,7 +23,6 @@ namespace Blackbaud.Addin.TokenAuthentication
         /// </summary>
         internal SigningKeysCache()
         {
-            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
         }
 
         /// <summary>
