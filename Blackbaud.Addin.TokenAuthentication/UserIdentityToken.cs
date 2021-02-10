@@ -52,7 +52,7 @@ namespace Blackbaud.Addin.TokenAuthentication
         public static async Task<UserIdentityToken> ParseAsync(string token, Guid applicationId)
         {
             var uit = new UserIdentityToken(SigningKeysCache.Instance);
-            await uit.ValidateTokenAsync(token, applicationId);
+            await uit.ValidateTokenAsync(token, applicationId).ConfigureAwait(false);
             return uit;
         }
 
@@ -126,7 +126,7 @@ namespace Blackbaud.Addin.TokenAuthentication
             var cacheKey = t.Header.Kid ?? t.Header.X5t ?? string.Empty;
             if (!_signingKeysCache.Certificates.ContainsKey(cacheKey) || _signingKeysCache.RefreshNeeded())
             {
-                await _signingKeysCache.Refresh();
+                await _signingKeysCache.Refresh().ConfigureAwait(false);
 
                 // If it still doesn't contain the key, then enter a null value to avoid re-checking each time.
                 if (!_signingKeysCache.Certificates.ContainsKey(cacheKey))

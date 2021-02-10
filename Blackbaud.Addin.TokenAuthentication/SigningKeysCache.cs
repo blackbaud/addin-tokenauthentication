@@ -74,14 +74,14 @@ namespace Blackbaud.Addin.TokenAuthentication
             using (var client = new HttpClient())
             {
                 // Process OpenIdConfig
-                var config = await client.GetStringAsync(_openIdConfigUrl);
+                var config = await client.GetStringAsync(_openIdConfigUrl).ConfigureAwait(false);
                 var c = JObject.Parse(config);
 
                 var issuer = c.Value<string>("issuer");
                 var jwks_uri = c.Value<string>("jwks_uri");
 
                 // Process JwksUri
-                var jwksResponse = await client.GetStringAsync(jwks_uri);
+                var jwksResponse = await client.GetStringAsync(jwks_uri).ConfigureAwait(false);
                 var jwks = JObject.Parse(jwksResponse);
                 var keys = jwks.Value<JArray>("keys");
 
