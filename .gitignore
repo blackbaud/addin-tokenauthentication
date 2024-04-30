@@ -10,3 +10,4 @@
 *.user
 /PactOutput/logs
 /PactOutput/verifier_logs
+Blackbaud.Addin.TokenAuthentication.Tester/.vs/
